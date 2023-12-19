@@ -1,0 +1,19 @@
+{
+	"name":"openvpn",
+	"description":"OpenVPN Server",
+	"install": [
+		"mkdir -p /home/op/vpn",
+		"sudo apt-get update && sudo apt --fix-broken install -y",
+		"wget -O /home/op/vpn/openvpn.sh",
+		"chmod +x /home/op/vpn/openvpn.sh",
+		"sudo ufw allow 443",
+		"sudo /home/op/vpn/openvpn.sh",
+        "sudo cp /root/client.ovpn /home/op/vpn/client.ovpn",
+        "sudo chown op:users /home/op/vpn/client.ovpn"
+	],
+	"uninstall":[
+		"echo \"3\nY\" | sudo /home/op/vpn/openvpn.sh",
+		"rm -rf /home/op/vpn"
+	],
+    "notes":"Use the command 'sanapasti-vpn <instance>' to download and connect to the VPN server."
+}
