@@ -1,0 +1,18 @@
+{
+	"name":"sanapasti-premium",
+	"description":"Proses Bisnis adalah kunci",
+	"variables": [],
+	"install": [
+		"mkdir /home/op/vpn",
+		"sudo ufw allow 8080",
+		"sudo ufw allow 8081",
+		"sudo ufw allow 80",
+		"sudo ufw allow 443",
+		"mkdir -p /home/op/profiles /home/op/public/downloads/"
+	],
+	"uninstall":[
+		"echo \"3\nY\" | sudo /home/op/vpn/openvpn.sh",
+		"rm -rf /home/op/vpn/"
+	],
+    "notes":"sanapasti-ls --appliance"
+}
