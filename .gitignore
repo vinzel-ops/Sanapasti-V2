@@ -1,0 +1,16 @@
+.swp
+.DS_store
+.sshconfig
+.syncthing.
+accounts/.json
+archive/
+authorized_keys
+boxes/*
+images/sanapasti.json
+interact/includes/functions.sh
+keys/*
+logs/*
+sanapasti.json
+selected.conf
+stats.log
+tmp/*
